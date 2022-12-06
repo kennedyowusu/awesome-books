@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: 0.3s linear;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+html {
+  font-size: 50%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 5rem;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--white-color);
+  color: var(--black-color);
+  width: 100%;
+}
