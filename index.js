@@ -1,6 +1,7 @@
 /* eslint-disable class-methods-use-this */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-unused-vars */
+
 const form = document.querySelector('#form');
 const Author = document.querySelector('.Author');
 const Title = document.querySelector('.Title');
@@ -15,6 +16,7 @@ const displayContact = document.querySelector('#display_contact');
 const displayBooks = document.querySelector('#display_list');
 const displayForm = document.querySelector('#display_form');
 const date = document.querySelector('.date');
+
 class Book {
   // eslint-disable-next-line no-useless-constructor, no-empty-function
   constructor() {}
@@ -119,7 +121,7 @@ const showBooksOnly = () => {
   container.style.display = 'none';
   bookText.style.display = 'block';
   contact.style.display = 'none';
-  date.style.display = 'none';
+  date.style.display = '';
 };
 
 const showOnlyForm = () => {
