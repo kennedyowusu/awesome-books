@@ -1,16 +1,11 @@
-/* eslint-disable class-methods-use-this */
-/* eslint-disable no-restricted-globals */
 /* eslint-disable no-unused-vars */
+/* eslint-disable no-restricted-globals */
 
 const form = document.querySelector('#form');
 const Author = document.querySelector('.Author');
 const Title = document.querySelector('.Title');
-const msg = document.getElementById('msg');
 const bookText = document.getElementById('book-text');
-const containerbooks = document.querySelector('.container-books');
 const container = document.querySelector('.container');
-const list = document.querySelector('.list');
-const addNew = document.querySelector('.addNew');
 const contact = document.querySelector('#contact');
 const displayContact = document.querySelector('#display_contact');
 const displayBooks = document.querySelector('#display_list');
@@ -18,17 +13,14 @@ const displayForm = document.querySelector('#display_form');
 const date = document.querySelector('.date');
 
 class Book {
-  // eslint-disable-next-line no-useless-constructor, no-empty-function
-  constructor() {}
-
-  static validateInputData(title, author) {
+  static validateInputData = (title, author) => {
     if (title.length < 1 || author.length < 1) {
       return false;
     }
     return true;
   }
 
-  save(title, author) {
+  save = (title, author) => {
     let books = [];
     if (localStorage.getItem('book') === null) {
       books = [];
@@ -40,9 +32,9 @@ class Book {
     localStorage.setItem('book', JSON.stringify(books));
   }
 
-  static addBook(title, author) {
+  static addBook = (title, author) => {
     const isValidInput = this.validateInputData(title, author);
-    if (!isValidInput) console.log('Enter Valid Input');
+    if (!isValidInput);
     else {
       const book = new Book(title, author);
       book.save(title, author);
@@ -50,7 +42,7 @@ class Book {
     }
   }
 
-  static removeBook(title, author) {
+  static removeBook = (title, author) => {
     let books = [];
 
     if (localStorage.getItem('book') === null) {
@@ -67,7 +59,7 @@ class Book {
     this.renderBooks();
   }
 
-  static renderBooks() {
+  static renderBooks = () => {
     bookText.innerHTML = '';
     let books = [];
     if (localStorage.getItem('book') === null) {
@@ -98,9 +90,9 @@ form.addEventListener('submit', (e) => {
   Author.value = '';
 });
 
-function deleteBook(text1, text2) {
+const deleteBook = (text1, text2) => {
   Book.removeBook(text1, text2);
-}
+};
 
 contact.innerHTML = `
         <h2> Contact information </h2>
@@ -111,11 +103,11 @@ contact.innerHTML = `
           <li>Street Address: Kwame Nkrumah Downside</li>
         </ul>`;
 
-function showOnlyContact() {
+const showOnlyContact = () => {
   contact.style.display = 'block';
   container.style.display = 'none';
   bookText.style.display = 'none';
-}
+};
 
 const showBooksOnly = () => {
   container.style.display = 'none';
