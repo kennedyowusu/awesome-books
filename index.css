@@ -118,6 +118,10 @@ h3 {
   background: var(--black-color);
 }
 
+.active-link {
+  color: var(--orange-color);
+}
+
 .date {
   font-size: 2rem;
   color: var(--black-color);

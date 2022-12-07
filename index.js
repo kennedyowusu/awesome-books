@@ -5,6 +5,8 @@ import {
   bookText,
 } from './modules/logic.js';
 
+import LocalStorage from './modules/local_storage.js';
+
 const form = document.querySelector('#form');
 const Author = document.querySelector('.Author');
 const Title = document.querySelector('.Title');
@@ -22,11 +24,13 @@ class Book {
     if (localStorage.getItem('book') === null) {
       books = [];
     } else {
-      books = JSON.parse(localStorage.getItem('book'));
+      // books = JSON.parse(localStorage.getItem('book'));
+      books = LocalStorage.getLocalStorage('books');
     }
     const book = { text1: title, text2: author };
     books.push(book);
-    localStorage.setItem('book', JSON.stringify(books));
+    // localStorage.setItem('book', JSON.stringify(books));
+    LocalStorage.setLocalStorage(books);
   }
 
   static addBook = (title, author) => {
@@ -45,14 +49,16 @@ class Book {
     if (localStorage.getItem('book') === null) {
       books = [];
     } else {
-      books = JSON.parse(localStorage.getItem('book'));
+      // books = JSON.parse(localStorage.getItem('book'));
+      books = LocalStorage.getLocalStorage('books');
     }
     books.forEach((book, index) => {
       if (book.text1 === title && book.text2 === author) {
         books.splice(index, 1);
       }
     });
-    localStorage.setItem('book', JSON.stringify(books));
+    // localStorage.setItem('book', JSON.stringify(books));
+    LocalStorage.setLocalStorage(books);
     this.renderBooks();
   }
 
