@@ -118,18 +118,15 @@ h3 {
   background: var(--black-color);
 }
 
-.date-container {
+.date {
+  font-size: 2rem;
+  color: var(--black-color);
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding: 2rem 6rem;
   width: 100%;
   height: 30%;
-}
-
-.date {
-  font-size: 2rem;
-  color: var(--black-color);
 }
 
 .book-list {
