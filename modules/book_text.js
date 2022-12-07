@@ -3,7 +3,7 @@
 /* eslint-disable import/prefer-default-export */
 
 import {
-  container, contact, displayContact, displayBooks, displayForm, date, bookText,
+  container, contact, displayContact, displayBooks, displayForm, bookText,
 } from './modules/data.js';
 
 const showOnlyContact = () => {
@@ -16,14 +16,12 @@ const showBooksOnly = () => {
   container.style.display = 'none';
   bookText.style.display = 'block';
   contact.style.display = 'none';
-  date.style.display = '';
 };
 
 const showOnlyForm = () => {
   container.style.display = 'block';
   bookText.style.display = 'none';
   contact.style.display = 'none';
-  date.style.display = 'none';
 };
 
 function init() {
