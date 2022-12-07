@@ -2,7 +2,7 @@
 /* eslint-disable no-restricted-globals */
 
 import {
-  container, contact, displayContact, displayBooks, displayForm, date, bookText,
+  bookText,
 } from './modules/data.js';
 
 const form = document.querySelector('#form');
