@@ -90,9 +90,10 @@ form.addEventListener('submit', (e) => {
   Author.value = '';
 });
 
-window.deleteBook = (text1, text2) => {
+function deleteBook(text1, text2) {
+  console.log(text1, text2);
   Book.removeBook(text1, text2);
-};
+}
 
 contact.innerHTML = `
         <h2> Contact information </h2>
