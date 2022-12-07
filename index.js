@@ -3,7 +3,7 @@
 
 import {
   bookText,
-} from './modules/data.js';
+} from './modules/logic.js';
 
 const form = document.querySelector('#form');
 const Author = document.querySelector('.Author');
