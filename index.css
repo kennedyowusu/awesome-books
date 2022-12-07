@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --navbar-color: #3c3a39;
+  --hero-color: #1c1a19;
+  --orange-color: #ff6b00;
+  --semi-white-color: #fff5e1;
+  --white-color: #fff;
+  --black-color: #000;
+  --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+  --border-radius: 0.5rem;
+  --box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  --transition: all 0.03s linear;
+  --spacing: 0.3rem;
+  --light-spacing: 0.5rem;
+  --max-width: 1440px;
+}
+
+* {
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: 0.3s linear;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+html {
+  font-size: 50%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 5rem;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--white-color);
+  color: var(--black-color);
+  width: 100%;
+}
+
+a {
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 9rem;
+  background: var(--white-color);
+  z-index: 999;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  justify-content: space-around;
+  padding: 0 1rem;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  width: 100%;
+  height: 100%;
+}
+
+#header-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+#header-list li {
+  margin: 0 1rem;
+  list-style-type: none;
+}
+
+#header-list li a {
+  font-size: 2.2rem;
+  color: var(--black-color);
+  padding: 1rem;
+  position: relative;
+}
+
+.navbar-divider {
+  height: 25px;
+  width: 0.2rem;
+  background: var(--black-color);
+}
+
+.active-link {
+  color: var(--orange-color);
+}
+
+.date {
+  font-size: 2rem;
+  color: var(--black-color);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2rem 6rem;
+  width: 100%;
+  height: 30%;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding: 5%;
+  border: 0.5px solid #ff6b00;
+  border-radius: 10px;
+  margin-top: 3%;
+}
+
+.add-book-title {
+  font-size: 3rem;
+  color: var(--black-color);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+form > input {
+  width: 100%;
+  height: 7rem;
+  border: 0.1px solid #ff6b00;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  padding: 0.8rem;
+  font-size: 1.5rem;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  border: 0.1px solid #ff6b00;
+  border-radius: 5px;
+  padding: 0.5rem;
+  width: 100%;
+  height: 7rem;
+  background-color: #ff6b00;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+}
+
+#btn-text {
+  background-color: #ff6b00;
+  color: #fff;
+  font-size: 3rem;
+}
+
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15rem;
+  margin-right: auto;
+  margin-left: auto;
+  border: 0.1px solid #ff6b00;
+  border-radius: 5px;
+  padding: 2.5rem;
+  width: 40%;
+  height: 25rem;
+}
+
+#contact h2 {
+  font-size: 3rem;
+  color: #000;
+  text-align: center;
+}
+
+#contact > ul {
+  font-size: 2rem;
+  color: #000;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#contact > ul > li {
+  margin-bottom: 1rem;
+}
+
+#posts {
+  margin-top: 0.1%;
+}
+
+.wrapper {
+  display: flex;
+  background: #f0f4e5;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12rem;
+}
+
+.book-title {
+  font-size: 2rem;
+  color: #000;
+  text-align: center;
+  padding: 2rem;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  margin: 3rem;
+}
+
+.book-author {
+  font-size: 2rem;
+  color: #000;
+  text-align: center;
+  padding: 2rem;
+  border: 3px solid #fff;
+  border-radius: 5px;
+}
+
+.wrapper > p {
+  font-size: 2rem;
+  color: #000;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.wrapper > button {
+  background-color: #ff6b00;
+  color: #fff;
+  font-size: 2rem;
+  border: 0.1px solid #ff6b00;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-left: 1rem;
+  margin-right: 3rem;
+}
+
+.footer-container {
+  margin-bottom: 12px;
+  width: 100%;
+  font-family: Calibri, sans-serif;
+  border: 0.01px solid black;
+  position: fixed;
+  bottom: -11px;
+  padding: 15px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-text {
+  font-size: 2rem;
+  color: var(--black-color);
+}
