@@ -3,7 +3,7 @@
 
 import {
   container, contact, displayContact, displayBooks, displayForm, date, bookText,
-} from './modules/new.js';
+} from './modules/data.js';
 
 const form = document.querySelector('#form');
 const Author = document.querySelector('.Author');

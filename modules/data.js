@@ -7,14 +7,18 @@ export const displayForm = document.querySelector('#display_form');
 export const date = document.querySelector('.date');
 export const bookText = document.getElementById('book-text');
 
-contact.innerHTML = `
-        <h2> Contact information </h2>
+setInterval(() => {
+  date.innerHTML = `${Date().slice(0, 24)}`;
+}, 1000);
 
-        <ul>
-          <li>Email Address: Kennediowusu@gmail.com</li>
-          <li>Phone Number: +233546985015</li>
-          <li>Street Address: Kwame Nkrumah Downside</li>
-        </ul>`;
+contact.innerHTML = `
+  <h2> Contact information </h2>
+
+  <ul>
+    <li>Email Address: Kennediowusu@gmail.com</li>
+    <li>Phone Number: +233546985015</li>
+    <li>Street Address: Kwame Nkrumah Downside</li>
+  </ul>`;
 
 const showOnlyContact = () => {
   contact.style.display = 'block';
@@ -52,9 +56,3 @@ window.document.addEventListener('DOMContentLoaded', init());
 displayContact.addEventListener('click', showOnlyContact);
 displayBooks.addEventListener('click', showBooksOnly);
 displayForm.addEventListener('click', showOnlyForm);
-
-function showDate() {
-  date.innerHTML = `${new Date()}`;
-}
-
-setInterval(showDate, 1000);
